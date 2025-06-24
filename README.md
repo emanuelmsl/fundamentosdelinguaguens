@@ -1,71 +1,77 @@
-# Fundamentos das Linguagens de Programação – UFC
+# 01 - Introdução às Linguagens de Programação
 
-- **01-introducao/**  
+## Histórico
 
-1957 - FORTRAN (Primeira linguagem de alto nível)
-1958 - LISP (Primeira linguagem funcional)
-1964 - BASIC (Linguagem para iniciantes)
-1970 - Pascal (Linguagem estruturada)
-1972 - C (Linguagem de sistemas influente)
-1983 - C++ (Extensão OO do C)
-1987 - Perl (Linguagem de script)
-1991 - Python (Linguagem multiparadigma)
-1995 - Java (Linguagem multiplataforma)
-1995 - JavaScript (Linguagem para web)
-2000 - C# (Linguagem da Microsoft)
-2009 - Go (Linguagem concorrente do Google)
-2010 - Rust (Linguagem de sistemas segura)
-2012 - TypeScript (JavaScript tipado)
+- **1957** – FORTRAN: Primeira linguagem de alto nível, focada em cálculos científicos.
+- **1958** – LISP: Primeira linguagem funcional, usada em Inteligência Artificial.
+- **1964** – BASIC: Desenvolvida para iniciantes.
+- **1970** – Pascal: Linguagem estruturada para ensino.
+- **1972** – C: Linguagem de sistemas influente.
+- **1983** – C++: Extensão orientada a objetos do C.
+- **1987** – Perl: Linguagem de script poderosa.
+- **1991** – Python: Linguagem multiparadigma e de fácil leitura.
+- **1995** – Java: Multiplataforma com máquina virtual (JVM).
+- **1995** – JavaScript: Linguagem para web.
+- **2000** – C#: Linguagem da Microsoft.
+- **2009** – Go: Linguagem concorrente do Google.
+- **2010** – Rust: Linguagem segura para sistemas.
+- **2012** – TypeScript: JavaScript tipado.
 
+## Objetivos
 
-- **02-ambientes/**
+- Entender a evolução das linguagens.
+- Reconhecer paradigmas e influências.
 
-Diagrama de Compilador vs Interpretador vs Máquina Virtual
+# 02 - Ambientes de Execução
 
-[Fonte] → [Compilador] → [Código de Máquina]
-[Fonte] → [Interpretador] → Resultado direto
-[Fonte Java] → [Bytecode] → [JVM]
+## Tipos de Ambientes
 
-Exemplos:
+- **Compilador**: Traduz o código-fonte diretamente para código de máquina.
+- **Interpretador**: Executa o código-fonte linha a linha, sem gerar código de máquina.
+- **Máquina Virtual**: Traduz o código-fonte para um código intermediário (bytecode), que é executado numa máquina virtual.
 
-Compilador: C, Rust
+## Diagramas
 
-Interpretador: Python, Ruby
+## Exemplos
 
-Máquina Virtual: Java (JVM), C# (.NET CLR)
+| Ambiente       | Linguagens Exemplares        |
+|----------------|-----------------------------|
+| Compilador     | C, Rust                     |
+| Interpretador  | Python, Ruby                |
+| Máquina Virtual| Java (JVM), C# (.NET CLR)   |
 
+# 03 - Sintaxe e Semântica
 
-- **03-sintaxe-semantica/**
-  
+## Mini-Gramática da Linguagem MiniLang
+## Objetivos
 
-Mini-Gramática: Linguagem MiniLang
-Programa ::= Inicio Bloco Fim
-Bloco ::= Comando ; Bloco | Comando
-Comando ::= Imprima Texto | Se Condicao Entao Comando
-Texto ::= "[^"]*"
-Condicao ::= Verdadeiro | Falso
-Análise léxica:
-Imprima "Olá mundo"
-=> [Imprima] [String: "Olá mundo"]
+- Entender como construir gramáticas formais.
+- Diferenciar sintaxe (forma) e semântica (significado).
 
+<br>
 
-- **04-tipos-de-dados/**
+- # 04 - Tipos de Dados
+## Comparativo entre Linguagens
 
-Comparativo entre Python, C e JavaScript:
+### Python (tipagem dinâmica)
 
-# Python (dinâmica)
+```python
 x = "10" + 5  # Erro em tempo de execução
-
-// C (estática)
 int x = "10" + 5; // Erro de compilação
-
-// JavaScript (fraca)
 let x = "10" + 5;  // Resultado: "105"
 
+---
 
-- **05-estruturas-de-controle/**  
+# 05-estruturas-de-controle/README.md
 
-# Sistema de recomendação de filmes
+```markdown
+# 05 - Estruturas de Controle
+
+Estruturas que controlam o fluxo de execução do programa, como condicionais e laços.
+
+## Exemplo em Python
+
+```python
 genero = input("Digite seu gênero favorito (acao/comedia/terror): ")
 idade = int(input("Digite sua idade: "))
 
@@ -79,7 +85,6 @@ elif genero == "comedia":
 else:
     print("Recomendo: O Iluminado (1980)")
 
-# Lista de filmes assistidos
 for filme in ["Matrix", "Toy Story", "It"]:
     print(f"Já assistiu {filme}? (s/n)")
     resposta = input()
@@ -87,48 +92,61 @@ for filme in ["Matrix", "Toy Story", "It"]:
         print("Ótima escolha!")
         break
 
+---
 
-- **06-subprogramas/**  
+# 06-subprogramas/README.md
 
-Python - Referência:
+```markdown
+# 06 - Subprogramas (Funções e Procedimentos)
 
+## Passagem por Referência vs Valor
+
+### Python (passagem por referência)
+
+```python
 def alterar_lista(lista):
     lista.append(42)
-
-C - Valor:
+(c)
 void soma(int a) {
     a = a + 10;
 }
 
+## Objetivos
 
-- **07-implementacao-subprogramas/**
+- Visualizar a recursão e o funcionamento da pilha de execução.
+- Compreender alocação e liberação de contexto de função.
 
-fatorial(3)
-  → fatorial(2)
-    → fatorial(1)
-      → fatorial(0) [retorna 1]
-    → retorna 1 * 1 = 1
-  → retorna 2 * 1 = 2
-→ retorna 3 * 2 = 6
+# 08 - Programação Orientada a Objetos (POO)
 
+## Exemplo em Python
 
-- **08-orientacao-objetos/**
-
+```python
 class Personagem:
-    def __init__(self, nome): self.nome = nome
-    def falar(self): print(f"{self.nome} diz olá!")
+    def __init__(self, nome):
+        self.nome = nome
+
+    def falar(self):
+        print(f"{self.nome} diz olá!")
 
 class Guerreiro(Personagem):
-    def atacar(self): print(f"{self.nome} ataca com espada!")
+    def atacar(self):
+        print(f"{self.nome} ataca com espada!")
 
-- **09-concorrencia/**
+---
 
-Threads: Unidades de execução dentro de um mesmo processo (compartilham memória)
-Processos: Instâncias independentes de programas (memória isolada)
+# 09-concorrencia/README.md
 
-Exemplo em Python:
+```markdown
+# 09 - Concorrência
 
-python
+## Threads e Processos
+
+- **Thread**: Unidade de execução dentro do mesmo processo (memória compartilhada).
+- **Processo**: Instância independente do programa (memória isolada).
+
+## Exemplo em Python
+
+```python
 import threading
 
 def contador(inicio, fim):
@@ -141,16 +159,29 @@ t2 = threading.Thread(target=contador, args=(11, 15))
 t1.start()
 t2.start()
 
-- **10-gerenciamento-memoria/**
+---
 
-                  Java	                     C
-Alocação	    Automática (new)	       Manual (malloc)
-Liberação	    Garbage Collector	       Manual (free)
-Segurança	    Verificação de limites	 Acesso direto
-Performance	  Overhead do GC	         Controle total
+# 10-gerenciamento-memoria/README.md
 
-- **11-programacao-funcional/**  
+```markdown
+# 10 - Gerenciamento de Memória
 
+| Aspecto           | Java                             | C                       |
+|-------------------|---------------------------------|-------------------------|
+| Alocação          | Automática (new)                 | Manual (malloc)          |
+| Liberação         | Garbage Collector               | Manual (free)            |
+| Segurança         | Verificação de limites           | Acesso direto            |
+| Performance       | Overhead do GC                   | Controle total           |
+
+## Objetivos
+
+- Comparar gerenciamento manual vs automático.
+- Entender vantagens e desvantagens.
+# 11 - Programação Funcional
+
+## Exemplos em Python
+
+```python
 from functools import reduce
 
 # Fatorial com recursão e reduce
@@ -160,9 +191,15 @@ fatorial = lambda n: 1 if n == 0 else reduce(lambda x, y: x*y, range(1, n+1))
 numeros = [1, 2, 3, 4, 5]
 resultado = list(map(lambda x: x*2, filter(lambda x: x%2 == 0, numeros)))
 # [4, 8]
+---
+# 12-programacao-logica/README.md
 
-- **12-programacao-logica/**  
+```markdown
+# 12 - Programação Lógica
 
+## Exemplo em Prolog
+
+```prolog
 pai(joao, maria).
 pai(joao, pedro).
 mae(ana, maria).
@@ -170,63 +207,71 @@ mae(ana, pedro).
 
 irmao(X, Y) :- pai(P, X), pai(P, Y), mae(M, X), mae(M, Y), X \= Y.
 
-- **13-scripts-web/**  
+---
 
+# 13-scripts-web/README.md
+
+```markdown
+# 13 - Scripts para Web e Automação
+
+## Script para organizar arquivos por extensão
+
+```python
 import os
 import shutil
 
-# Organizar arquivos por extensão
 def organizar_diretorio(diretorio):
     for arquivo in os.listdir(diretorio):
         if os.path.isfile(os.path.join(diretorio, arquivo)):
             ext = arquivo.split('.')[-1]
             pasta_ext = os.path.join(diretorio, ext)
-            
-  if not os.path.exists(pasta_ext):
+
+            if not os.path.exists(pasta_ext):
                 os.mkdir(pasta_ext)
-            
-  shutil.move(
+
+            shutil.move(
                 os.path.join(diretorio, arquivo),
                 os.path.join(pasta_ext, arquivo)
             )
 
 organizar_diretorio('./downloads')
 
-- **14-tendencias/**  
+---
 
-Rust é uma linguagem de sistemas que combina:
+# 14-tendencias/README.md
 
-Performance comparável a C/C++
+```markdown
+# 14 - Tendências em Linguagens de Programação
 
-Segurança de memória sem garbage collector
+## Rust
 
-Concorrência sem data races
+- Linguagem de sistemas com performance comparável a C/C++.
+- Segurança de memória sem garbage collector.
+- Concorrência sem data races.
+- Sistema de ownership inovador.
 
-Sistema de ownership inovador
+## Exemplo
 
-Exemplo:
-
-rust
+```rust
 fn main() {
     let mut s = String::from("hello");
     s.push_str(", world!");
     println!("{}", s); // hello, world!
     
-  // Ownership previne referências inválidas
-  let s1 = String::from("Rust");
-  let s2 = s1; // s1 é movido para s2
-  // println!("{}", s1); // Erro! s1 não é mais válido
+    // Ownership previne referências inválidas
+    let s1 = String::from("Rust");
+    let s2 = s1; // s1 é movido para s2
+    // println!("{}", s1); // Erro! s1 não é mais válido
 }
 
-Principais vantagens:
+---
 
-Sem null pointers ou dangling pointers
+---
 
-Thread safety garantido em tempo de compilação
+Se preferir, posso montar também um `.gitignore` básico, ou ajudar a criar exemplos de código para dentro das pastas. Quer?
 
-Sem overhead de runtime
 
-Interoperabilidade com C
 
-Ecossistema crescente (Cargo)
+
+
 
