@@ -268,8 +268,6 @@ fn main() {
 
 ---
 
-Se preferir, posso montar também um `.gitignore` básico, ou ajudar a criar exemplos de código para dentro das pastas. Quer?
-
 
 
 
