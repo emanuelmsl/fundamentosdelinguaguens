@@ -44,11 +44,13 @@
 
 ## Mini-Gramática da Linguagem Tepi
 TepiScript é uma linguagem ultra-simples, com apenas 8 comandos básicos, ideal para aprendizado ou prototipagem rápida.
+
 1. Regras Básicas
 Sintaxe: COMANDO valor (sempre 1 comando por linha).
 Sem chaves, parênteses ou ponto e vírgula.
 Variáveis: criadas na primeira atribuição.
 Tipos: num, texto, sim/não.
+
 2. Comandos Essenciais
 COMANDO	EXEMPLO	DESCRIÇÃO
 var	var x = 5	Cria uma variável
@@ -59,26 +61,35 @@ mostra	mostra "Olá"	Exibe informação na tela
 fun	fun soma a b	Define uma função
 ret	ret a + b	Retorna um valor da função
 #	# comentário	Linha de comentário (ignorada)
+
 3. Exemplos
+
 Olá Mundo
 tepi
 mostra "Olá, Mundo!"
+
+
 Calculadora
 tepi
 var a = 10  
 var b = 5  
 mostra a + b
+
+
 Condicional
 tepi
 se a > b  
     mostra "A é maior"  
 senao  
     mostra "B é maior"
-   Função
+
+
+Função
 tepi
 fun soma x y  
     ret x + y  
 mostra soma 3 4
+
 
 ## Objetivos
 
