@@ -60,7 +60,6 @@ enqto	enqto x < 10	Loop enquanto condição for verdadeira
 mostra	mostra "Olá"	Exibe informação na tela
 fun	fun soma a b	Define uma função
 ret	ret a + b	Retorna um valor da função
-#	# comentário	Linha de comentário (ignorada)
 
 3. Exemplos
 
