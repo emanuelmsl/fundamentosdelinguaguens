@@ -42,7 +42,7 @@
 
 # 03 - Sintaxe e Semântica
 
-## Mini-Gramática da Linguagem MiniLang
+## Mini-Gramática da Linguagem Tepi
 TepiScript é uma linguagem ultra-simples, com apenas 8 comandos básicos, ideal para aprendizado ou prototipagem rápida.
 1. Regras Básicas
 Sintaxe: COMANDO valor (sempre 1 comando por linha).
